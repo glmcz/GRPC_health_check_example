@@ -3,7 +3,7 @@ package main
 import "log/slog"
 
 func main() {
-	slog.Info("Simple GRPC healt example for ArgoCD started")
+	slog.Info("Simple GRPC health example for ArgoCD started")
 
 	app, err := NewApp().App("localhost:8085")
 	if err != nil {
