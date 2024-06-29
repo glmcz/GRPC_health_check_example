@@ -4,8 +4,7 @@ WORKDIR /app
 COPY . .
 
 RUN buf generate \
-	    --path api/schema/service/test-processor/test_processor.proto \
-        --path api/schema/service/webrtc-collector/webrtc_collector.proto
+        --path api/schema/probe/healt_check.proto
 
 # Use the official Golang image to create a build artifact.
 # This is based on Debian and sets the GOPATH to /go.
@@ -28,7 +27,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -installsuffix cgo -o /app/app /app/cmd/*.
 
 FROM alpine:latest
 
-RUN apk update && apk add ca-certificates && apk add --no-cache redis && rm -rf /var/cache/apk/* && mkdir /app
+RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk/* && mkdir /app
 
 
 # Set working directory

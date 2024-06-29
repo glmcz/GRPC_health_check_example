@@ -22,3 +22,6 @@ build-linux:
 		-o ./build/app \
 		-ldflags "-X main.Version=$(APP_VERSION)" \
 		./cmd/*.go
+
+docker:
+	docker build --platform linux/amd64 -t "glmcz/goapp-grpc-argocd:latest" -f ./build/Dockerfile .
