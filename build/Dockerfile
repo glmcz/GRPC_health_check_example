@@ -39,3 +39,5 @@ COPY --from=builder /app/app /app/app
 
 # Expose port
 EXPOSE 8085
+
+CMD ["/app/app"]
