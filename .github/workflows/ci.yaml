@@ -25,4 +25,4 @@ jobs:
         uses: docker/build-push-action@5
         with:
           push: true
-          tags: glmcz/goapp-grpc-argocd:tagname
+          tags: glmcz/goapp-grpc-argocd:latest
