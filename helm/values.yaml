@@ -73,7 +73,7 @@ resources: {}
 
 livenessProbe:
   grpc:
-    port: 10000
+    port: 8085
   initialDelaySeconds: 3
   periodSeconds: 60
 
