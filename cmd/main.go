@@ -1,7 +1,9 @@
 package main
 
+import "log/slog"
+
 func main() {
-	println("Hello World")
+	slog.Info("Simple GRPC healt example for ArgoCD started")
 
 	app, err := NewApp().App("localhost:8088")
 	if err != nil {
