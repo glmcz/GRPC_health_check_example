@@ -37,8 +37,6 @@ spec:
           ports:
             - name: grpc
               containerPort: {{ .Values.service.port }}
-          livenessProbe:
+          readinessProbe:
             grpc:
-              port: {{ .Values.livenessProbe.grpc.port }}
-            initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds }}
-            periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
+              port: 8085
