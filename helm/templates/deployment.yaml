@@ -37,8 +37,3 @@ spec:
           ports:
             - name: grpc
               containerPort: {{ .Values.service.port }}
-          livenessProbe:
-            grpc:
-              port: {{ .Values.livenessProbe.grpc.port }}
-            initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds }}
-            periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
