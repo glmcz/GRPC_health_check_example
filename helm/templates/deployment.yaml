@@ -38,6 +38,6 @@ spec:
               containerPort: {{ .Values.service.port }}
           readinessProbe:
             grpc:
-              port: {{ .Values.readinessProbe.grpc.port }}
+              port: {{ .Values.service.port }}
             initialDelaySeconds: {{ .Values.readinessProbe.initialDelaySeconds }}
             periodSeconds: {{ .Values.readinessProbe.periodSeconds }}

@@ -72,8 +72,6 @@ resources: {}
   #   memory: 128Mi
 
 readinessProbe:
-  grpc:
-    port: 8085
   initialDelaySeconds: 3
   periodSeconds: 60
 
