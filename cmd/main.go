@@ -4,8 +4,7 @@ import "log/slog"
 
 func main() {
 	slog.Info("Simple GRPC health example for ArgoCD started")
-
-	app, err := NewApp().App("localhost:8085")
+	app, err := NewApp().App(":8085")
 	if err != nil {
 		return
 	}
